@@ -4,3 +4,11 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 --require'lspconfig'.[LANG].setup{
 --    capabilities = capabilities
 --}
+
+require'lspconfig'.pyright.setup{
+    capabilities = capabilities
+}
+
+require'lspconfig'.clangd.setup{
+    capabilities = capabilities
+}

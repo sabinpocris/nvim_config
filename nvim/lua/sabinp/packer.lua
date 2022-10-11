@@ -5,22 +5,19 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     
-    use 'marko-cerovac/material.nvim'
-    
+    use 'folke/tokyonight.nvim'
+
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
     use 'nvim-treesitter/nvim-treesitter-context'
     
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
+    use 'nvim-lualine/lualine.nvim'
     
     use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
     use 'mfussenegger/nvim-jdtls' -- Java LS
-    
+
     use 'hrsh7th/cmp-nvim-lsp' -- Completion
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
@@ -32,9 +29,15 @@ return require('packer').startup(function(use)
 
     -- Telescope requirements
     use 'nvim-lua/plenary.nvim'
-    use 'kyazdani42/nvim-web-devicons'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use {'nvim-telescope/telescope.nvim', tag = '0.1.0',}
+    use 'kyazdani42/nvim-web-devicons'
+    
+    use {'vimwiki/vimwiki', branch='dev'}
 
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 
 end)
