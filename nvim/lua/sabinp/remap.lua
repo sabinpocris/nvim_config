@@ -1,4 +1,5 @@
-local Remap = require("sabinp.keymap")
-local nnoremap = Remap.nnoremap
+vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-nnoremap("<leader>pv", "<cmd>Ex<CR>")
+-- This is going to get me cancelled
+vim.keymap.set("i", "<C-c>", "<Esc>")
