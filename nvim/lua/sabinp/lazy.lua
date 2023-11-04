@@ -77,5 +77,18 @@ require("lazy").setup({
   'L3MON4D3/LuaSnip',
 
   -- Icons for nvim-cmp
-  'onsails/lspkind.nvim'
+  'onsails/lspkind.nvim',
+
+  -- Nvim-tree
+  {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    -- config = function()
+    --   require("nvim-tree").setup {}
+    -- end,
+  }
 })
