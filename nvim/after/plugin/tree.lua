@@ -8,6 +8,10 @@ vim.opt.termguicolors = true
 -- empty setup using defaults
 -- require("nvim-tree").setup()
 
+
+local HEIGHT_RATIO = 0.8 -- You can change this
+local WIDTH_RATIO = 0.5  -- You can change this too
+
 -- OR setup with some options
 require("nvim-tree").setup({
 	sort_by = "case_sensitive",
@@ -20,6 +24,11 @@ require("nvim-tree").setup({
 	filters = {
 		dotfiles = true,
 	},
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    },
+  },
 })
 
 -- mappings

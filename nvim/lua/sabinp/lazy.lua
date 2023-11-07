@@ -27,15 +27,6 @@ require("lazy").setup({
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
 
   -- Themes
-  -- {
-  --   "catppuccin/nvim",
-  --   name = "catppuccin",
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd([[colorscheme catppuccin-latte]])
-  --   end
-  -- },
-
   {
     "ellisonleao/gruvbox.nvim",
     priority = 1000 ,
@@ -43,20 +34,20 @@ require("lazy").setup({
       require("gruvbox").setup({
         contrast = "hard",
       });
-      vim.o.background = "dark"
-      vim.cmd([[colorscheme gruvbox]])
+      -- vim.o.background = "dark"
+      -- vim.cmd([[colorscheme gruvbox]])
     end
   },
 
-  -- {
-  --   "folke/tokyonight.nvim",
-  --   lazy = false,
-  --   priority = 1000,
-  --   opts = {},
-  --   config = function()
-  --     vim.cmd([[colorscheme tokyonight-day]])
-  --   end
-  -- },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+      vim.cmd([[colorscheme tokyonight-night]])
+    end
+  },
 
   -- Lualine
   {
