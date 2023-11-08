@@ -52,7 +52,7 @@ require("lazy").setup({
   -- Lualine
   {
     'nvim-lualine/lualine.nvim',
-    dependencies = { 'kyazdani42/nvim-web-devicons', lazy = true }
+    -- dependencies = { 'kyazdani42/nvim-web-devicons', lazy = true }
   },
 
   'mbbill/undotree',
@@ -78,8 +78,5 @@ require("lazy").setup({
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
-    -- config = function()
-    --   require("nvim-tree").setup {}
-    -- end,
-  }
+  },
 })
