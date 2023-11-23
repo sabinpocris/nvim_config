@@ -19,7 +19,7 @@ require("lazy").setup({
   -- Telescope
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.4',
-    -- or                              , branch = '0.1.x',
+      -- or                              , branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
 
@@ -34,9 +34,13 @@ require("lazy").setup({
       require("gruvbox").setup({
         contrast = "hard",
       });
-      -- vim.o.background = "dark"
-      -- vim.cmd([[colorscheme gruvbox]])
+      vim.o.background = "dark"
+      vim.cmd([[colorscheme gruvbox]])
     end
+  },
+
+  {
+    'shaunsingh/nord.nvim'
   },
 
   {
@@ -44,9 +48,9 @@ require("lazy").setup({
     lazy = false,
     priority = 1000,
     opts = {},
-    config = function()
-      vim.cmd([[colorscheme tokyonight-night]])
-    end
+    -- config = function()
+      -- vim.cmd([[colorscheme tokyonight-night]])
+    -- end
   },
 
   -- Lualine
