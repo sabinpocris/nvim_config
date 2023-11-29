@@ -24,7 +24,15 @@ require("lazy").setup({
   },
 
   -- Treesitter
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate"
+  },
+
+  -- Treesitter context aka function headers
+  {
+    'nvim-treesitter/nvim-treesitter-context'
+  },
 
   -- Themes
   {
@@ -139,5 +147,4 @@ require("lazy").setup({
       }
     }
   },
-
 })
